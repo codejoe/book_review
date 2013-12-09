@@ -1,0 +1,17 @@
+h1 Listing tes
+
+table
+  tr
+    th
+    th
+    th
+
+  - @tes.each do |te|
+    tr
+      td = link_to 'Show', te
+      td = link_to 'Edit', edit_te_path(te)
+      td = link_to 'Destroy', te, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Te', new_te_path

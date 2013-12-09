@@ -1,5 +1,9 @@
 ReviewApp::Application.routes.draw do
   root 'home#index'
+  resources :tes
+  get   'uploads' => 'upload#index'
+  post  'uploads' => 'upload#uploadFile'
+  #resources :uploads
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
