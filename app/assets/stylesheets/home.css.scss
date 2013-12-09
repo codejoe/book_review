@@ -1,0 +1,54 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+html, body{
+  height: 100%;
+  font: 12px $font-stack;
+  color: $primary-color;
+}
+
+.logoImage{
+  float: left;
+  display: block;
+}
+
+.logoTitle{
+  font-size: 28px;
+  float: left;
+  display: block;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#main{
+  overflow: auto;
+}
+
+#topPan{
+  padding-top: 20px;
+}
+
+#wrap{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+  display: block;
+}
+
+.footer{
+  position: relative;
+  height: 60px;
+  clear:both;
+  background-color: #f4f4f4;
+  padding-top: 25px;
+}
+
+.clearing{
+  clear: both
+}

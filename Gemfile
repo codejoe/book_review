@@ -42,4 +42,12 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+ gem 'debugger', group: [:development, :test]
+ gem 'slim-rails'
+ gem 'bootstrap-sass'
+ group :development do
+  gem 'rails_layout'
+ end
+ # gem "therubyracer"
+ # gem "less-rails"
+ # gem 'twitter-bootstrap-rails'
