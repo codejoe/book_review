@@ -4,18 +4,20 @@ one:
   name: MyString
   author: MyString
   description: MyText
-  date_relaese: 2013-12-09 10:58:04
+  date_relaese: 2013-12-09 11:08:46
   number_of_page: 1
   number_of_rate: 1
   featured: false
   category_id: 1
+  link_picture: MyString
 
 two:
   name: MyString
   author: MyString
   description: MyText
-  date_relaese: 2013-12-09 10:58:04
+  date_relaese: 2013-12-09 11:08:46
   number_of_page: 1
   number_of_rate: 1
   featured: false
   category_id: 1
+  link_picture: MyString
