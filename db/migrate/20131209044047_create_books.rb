@@ -8,7 +8,7 @@ class CreateBooks < ActiveRecord::Migration
       t.integer :number_of_page
       t.integer :number_of_rate
       t.boolean :featured
-      t.integer :category_id
+      t.string :link_picture
 
       t.timestamps
     end

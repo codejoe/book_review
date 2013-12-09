@@ -1,0 +1,72 @@
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20131209040020)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131209040020"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateReviews (20131209041514)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reviewer_name" varchar(255), "reviewer_email" varchar(255), "date" datetime, "book_id" integer, "reviewer_ip" varchar(255), "approval" boolean, "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131209041514"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategoryBooks (20131209043555)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "category_books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "book_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131209043555"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBooks (20131209044047)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "author" varchar(255), "description" text, "date_relaese" datetime, "number_of_page" integer, "number_of_rate" integer, "featured" boolean, "link_picture" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131209044047"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (69.6ms)[0m  INSERT INTO "books" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 09 Dec 2013 04:54:42 UTC +00:00], ["name", "buku 1"], ["updated_at", Mon, 09 Dec 2013 04:54:42 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "category_books" ON "categories"."id" = "category_books"."category_id" WHERE "category_books"."book_id" = ? ORDER BY "categories"."id" ASC LIMIT 1[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 09 Dec 2013 05:00:58 UTC +00:00], ["name", "Category 1"], ["updated_at", Mon, 09 Dec 2013 05:00:58 UTC +00:00]]
+  [1m[35m (5.2ms)[0m  commit transaction
+  [1m[36mCategoryBook Load (0.2ms)[0m  [1mSELECT "category_books".* FROM "category_books"[0m
+  [1m[35mCategoryBook Load (0.3ms)[0m  SELECT "category_books".* FROM "category_books" WHERE "category_books"."book_id" = ? ORDER BY "category_books"."id" ASC LIMIT 1  [["book_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "category_books" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["book_id", 1], ["category_id", 1], ["created_at", Mon, 09 Dec 2013 05:06:01 UTC +00:00], ["updated_at", Mon, 09 Dec 2013 05:06:01 UTC +00:00]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategoryBook Load (0.3ms)[0m  SELECT "category_books".* FROM "category_books"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "category_books" ON "categories"."id" = "category_books"."category_id" WHERE "category_books"."book_id" = ? ORDER BY "categories"."id" ASC LIMIT 1[0m  [["book_id", 1]]
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "category_books" ON "categories"."id" = "category_books"."category_id" WHERE "category_books"."book_id" = ? ORDER BY "categories"."id" ASC LIMIT 1[0m  [["book_id", 1]]
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "category_books" ON "categories"."id" = "category_books"."category_id" WHERE "category_books"."book_id" = ? ORDER BY "categories"."id" ASC LIMIT 1[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "books" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Mon, 09 Dec 2013 05:26:58 UTC +00:00], ["name", "Book 2"], ["updated_at", Mon, 09 Dec 2013 05:26:58 UTC +00:00]]
+  [1m[35m (5.6ms)[0m  commit transaction
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategoryBook Load (0.2ms)[0m  [1mSELECT "category_books".* FROM "category_books" WHERE "category_books"."book_id" = ? ORDER BY "category_books"."id" ASC LIMIT 1[0m  [["book_id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "category_books" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 2], ["category_id", 1], ["created_at", Mon, 09 Dec 2013 05:27:48 UTC +00:00], ["updated_at", Mon, 09 Dec 2013 05:27:48 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 09 Dec 2013 05:29:13 UTC +00:00], ["name", "Book 3"], ["updated_at", Mon, 09 Dec 2013 05:29:13 UTC +00:00]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "category_books" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 3], ["category_id", 1], ["created_at", Mon, 09 Dec 2013 05:29:13 UTC +00:00], ["updated_at", Mon, 09 Dec 2013 05:29:13 UTC +00:00]]
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "category_books" ON "categories"."id" = "category_books"."category_id" WHERE "category_books"."book_id" = ? ORDER BY "categories"."id" ASC LIMIT 1  [["book_id", 3]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" INNER JOIN "category_books" ON "books"."id" = "category_books"."book_id" WHERE "category_books"."category_id" = ?  [["category_id", 1]]
