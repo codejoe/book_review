@@ -13903,3 +13903,637 @@ ActionView::MissingTemplate (Missing template admins/salah password, application
 
 
   Rendered /usr/local/rvm/gems/ruby-1.9.2-p320/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-11 07:13:42 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (4.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 1392ms (Views: 1308.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/tes.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/upload.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:44 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/tes.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-11 07:13:45 +0700
+
+
+Started GET "/books" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/tes.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/upload.css?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/tes.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2013-12-11 07:13:53 +0700
+
+
+Started GET "/books" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/tes.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/upload.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/tes.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:00 +0700
+
+
+Started GET "/books" for 127.0.0.1 at 2013-12-11 07:14:07 +0700
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/tes.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/upload.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/tes.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:08 +0700
+
+
+Started GET "/books/new" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/upload.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/tes.css?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/tes.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-11 07:14:59 +0700
+
+
+Started GET "/books/new" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/tes.css?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/upload.css?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/tes.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-11 07:15:09 +0700
+
+
+Started GET "/books/new" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+Processing by BooksController#new as HTML
+  Rendered books/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/tes.css?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/upload.css?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/tes.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/upload.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-11 07:17:15 +0700

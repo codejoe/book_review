@@ -1,6 +1,7 @@
 ReviewApp::Application.routes.draw do
   root 'home#index'
   resources :admins
+  resources :books
   get   'uploads'       => 'upload#index'
   post  'uploads'       => 'upload#uploadFile'
   post  'admins/login'  => 'admins#login'
