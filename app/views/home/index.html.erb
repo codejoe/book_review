@@ -43,8 +43,9 @@
         <%= link_to "Administrator", :class => 'navbar-link' if current_user.role == "admin"  %>
         <%= link_to "Reviewer", :class => 'navbar-link' if current_user.role == "reviewer"  %>
         <% else %>
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+        <%= link_to "Sign up,", new_user_registration_path, :class => 'navbar-link'  %>
         <%#= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <a href="#">Forgot Password?</a>
     <% end %>
       </div>
     </div>
@@ -53,6 +54,7 @@
       <div class="row">
         <div class="col-md-8">
 
+        <h3>Feature</h3>
           <div class="feature">
             <div class="feature-img">
               <%= image_tag "the_namesake.jpg" %> 
@@ -63,6 +65,7 @@
             <div class="clearing"></div>
           </div>
 
+          <h3>Books</h3>
           <div class="books">
           <% 6.times do %>
             <div class="box">
@@ -73,8 +76,8 @@
             <div class="clearing"></div>
           </div>
 
-          <div class="category">
-            <h3>Category</h3>
+          <h3>Category</h3>
+          <div class="category">            
               <ul>
               <% 10.times do %>
                 <li><a href="#">Adventures</a></li>
