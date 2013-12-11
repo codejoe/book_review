@@ -1,4 +1,6 @@
 ReviewApp::Application.routes.draw do
+  devise_for :reviewers
+  devise_for :admins
   root 'home#index'
   resources :admins
   resources :books
