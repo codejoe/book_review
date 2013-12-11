@@ -4,8 +4,10 @@ class Admin::DashboardController < ApplicationController
   # --> create controller admin/dashboard_controller.rb + views/admin/index.html
 
   # Method for accessing admin page
+  layout 'admin'
   before_filter :authenticate_user!
 
   def index
+
   end
 end

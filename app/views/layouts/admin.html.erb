@@ -7,16 +7,60 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<!--
-<%# if notice %>
-  <p class="alert alert-notice"><%#= notice %></p>
-<%# end %>
-<%# if alert %>
-  <p class="alert alert-error"><%#= alert %></p>
-<%# end %>
--->
+
+<div id="wrap">
+  <div id="main" class="container clear-top">
+
+    <div id="topPan">
+      <a href="<%= root_path %>">
+      <div class="logoImage">
+        <%= image_tag "logo.png" %> 
+      </div>
+      <div class="logoTitle">
+        Books Review
+      </div>
+      </a>
+
+      <div class="clearing">
+        &nbsp;
+      </div>
+      <div class="navBar">
+        <nav class="navbar navbar-default" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="<%= admin_books_path %>">Books</a>
+            </li>
+            <li>
+              <a href="#">Categories</a>
+            </li>
+            <li>
+              <a href="#">Admins</a>
+            </li>
+            <li>
+              <a href="#">Reviewers</a>
+            </li>
+            <li>
+              <a href="#">Visitors</a>
+            </li>
+            <li>
+              <a href="#">Comments</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sign-form">
+        Welcome back, <b><%= current_user.email %></b>
+      </div>
+    </div>
 
 <%= yield %>
 
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <p>&copy; 2013. Akademi Rails.</p>
+  </div>
+</div>
 </body>
 </html>
