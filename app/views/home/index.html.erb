@@ -1,5 +1,6 @@
 <div id="wrap">
   <div id="main" class="container clear-top">
+
     <div id="topPan">
       <div class="logoImage">
         <%= image_tag "logo.png" %> 
@@ -25,16 +26,92 @@
           </ul>
         </nav>
       </div>
-    </div>
-    <div id="middlePan">
-      <div class="row">
-        <div class="col-md-8">Left Pan</div>
-        <div class="col-md-4">Right Pan</div>
+      <div class="sign-form">
+        <form method="post" action="#">
+          Email: <input type="text" name="email" value=""> 
+          Password: <input type="password" name="password" value=""> 
+          <input type="submit" name="submit" value="Sign In">
+          <br/>
+          Not a member? <a href="#">Sign Up</a>
+        </form>
       </div>
     </div>
-    <div id="bottomPan">
-      Bottom Pan
+
+    <div id="middlePan">
+      <div class="row">
+        <div class="col-md-8">
+
+          <div class="feature">
+            <div class="feature-img">
+              <%= image_tag "the_namesake.jpg" %> 
+            </div>
+            <div class="feature-summary">
+              Jhumpa Lahiri's Interpreter of Maladies established this young writer as one the most brilliant of her generation. Her stories are one of the very few debut works -- and only a handful of collections -- to have won the Pulitzer Prize for fiction. Among the many other awards and honors it received were the New Yorker Debut of the Year award, the PEN/Hemingway Award, and the...more
+            </div>
+            <div class="clearing"></div>
+          </div>
+
+          <div class="books">
+          <% 6.times do %>
+            <div class="box">
+              <a href="#"> <%= image_tag "the_namesake.jpg" %> </a>
+            </div>
+          <% end %>
+            <a class="text-right" href="#">more..</a>
+            <div class="clearing"></div>
+          </div>
+
+          <div class="category">
+            <h3>Category</h3>
+              <ul>
+              <% 10.times do %>
+                <li><a href="#">Adventures</a></li>
+              <% end %>
+              </ul>
+          </div>
+
+        </div>
+
+        <div class="col-md-4">
+          
+          <div class="new-review">
+            <h3>New Review</h3>
+            <% 3.times do %>
+              <div class="review">
+                <%= image_tag 'the_namesake.jpg' %>
+                <p>
+                  Book Title<br/>
+                  <small>Reviewed by: Tony</small>
+                </p>
+              </div>
+              <div class="clearing"></div>
+            <% end %>
+          </div>
+          <div class="popular-review">
+            <h3>Popular</h3>
+            <% 3.times do %>
+              <div class="review">
+                <%= image_tag 'the_namesake.jpg' %>
+                <p>
+                  Book Title<br/>
+                  <small>Reviewed by: Tony</small>
+                </p>
+              </div>
+              <div class="clearing"></div>
+            <% end %>            
+          </div>
+          <div class="reviewer">
+            <!-- #Reviewer -->
+          </div>
+
+        </div>
+      </div>
     </div>
+
+    <div id="bottomPan">
+      <!-- #Bottom Pan -->
+    </div>
+
   </div>
 </div>
 <div class="footer">
