@@ -1,12 +1,9 @@
 book_review
 ===========
 
-Tambahan biar conflict
+# Book Review Project
 
-Book Review Project
-
-
-Hello from Microdevil
+## Hello from Microdevil
 
 fiture
 -> review terbaru
@@ -44,9 +41,7 @@ database
 ----> approval?
 ----> content
 
-
-
-admin
+## Admin
 -> add buku
 -> add admin
 -> del buku
