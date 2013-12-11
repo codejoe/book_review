@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
     @_current_admin ||= session[:current_admin_id] &&
       Admin.find_by(id: session[:current_admin_id])
   end
+
+  def after_sign_in_path_for(resource)
+    admin_root_path
+  end
 end

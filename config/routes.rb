@@ -6,6 +6,10 @@ ReviewApp::Application.routes.draw do
   get   'uploads'       => 'upload#index'
   post  'uploads'       => 'upload#uploadFile'
   post  'admins/login'  => 'admins#login'
+
+  namespace :admin do 
+    root 'dashboard#index'
+  end
   #resources :uploads
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
