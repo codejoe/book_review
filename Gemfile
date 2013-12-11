@@ -45,6 +45,7 @@ end
  gem 'debugger', group: [:development, :test]
  gem 'slim-rails'
  gem 'bootstrap-sass'
+ gem 'devise'
  group :development do
   gem 'rails_layout'
  end
