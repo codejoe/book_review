@@ -1,6 +1,6 @@
-class DeviseCreateReviewers < ActiveRecord::Migration
+class DeviseCreateUsers < ActiveRecord::Migration
   def change
-    create_table(:reviewers) do |t|
+    create_table(:users) do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
@@ -18,6 +18,7 @@ class DeviseCreateReviewers < ActiveRecord::Migration
       t.datetime :last_sign_in_at
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
+      t.boolean  :reviewer, :default => false
 
       ## Confirmable
       # t.string   :confirmation_token
@@ -34,9 +35,9 @@ class DeviseCreateReviewers < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :reviewers, :email,                :unique => true
-    add_index :reviewers, :reset_password_token, :unique => true
-    # add_index :reviewers, :confirmation_token,   :unique => true
-    # add_index :reviewers, :unlock_token,         :unique => true
+    add_index :users, :email,                :unique => true
+    add_index :users, :reset_password_token, :unique => true
+    # add_index :users, :confirmation_token,   :unique => true
+    # add_index :users, :unlock_token,         :unique => true
   end
 end

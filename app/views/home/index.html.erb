@@ -27,13 +27,23 @@
         </nav>
       </div>
       <div class="sign-form">
-        <form method="post" action="#">
-          Email: <input type="text" name="email" value=""> 
-          Password: <input type="password" name="password" value=""> 
-          <input type="submit" name="submit" value="Sign In">
-          <br/>
-          Not a member? <a href="#">Sign Up</a>
-        </form>
+      <% if user_signed_in? == false %>
+        <%= form_for(@user, :as => :user, :url => session_path(:user)) do |f| %>
+          <%#= devise_error_messages! %>
+          Email: <%= f.email_field :email, :autofocus => true %>
+          Password:<%= f.password_field :password %>
+          <%= f.submit "Sign up" %>
+        <% end %>
+       Not a member? <!--<a href="#">Sign Up</a>-->
+      <% end %>
+    <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%#= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+        <%#= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    <% end %>
       </div>
     </div>
 

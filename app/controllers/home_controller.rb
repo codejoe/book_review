@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index 
-    @hello = 'Hello'
+    @user = User.new
   end
 
 end

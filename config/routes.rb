@@ -1,5 +1,5 @@
 ReviewApp::Application.routes.draw do
-  devise_for :reviewers
+  devise_for :users
   devise_for :admins
   root 'home#index'
   resources :admins
