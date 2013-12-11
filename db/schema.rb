@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131211062550) do
+ActiveRecord::Schema.define(version: 20131211133448) do
 
   create_table "books", force: true do |t|
     t.string   "name"
     t.string   "author"
     t.text     "description"
-    t.datetime "date_relaese"
+    t.date     "date_release"
     t.integer  "number_of_page"
     t.integer  "number_of_rate"
     t.boolean  "featured"
