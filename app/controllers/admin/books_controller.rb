@@ -9,7 +9,7 @@ class Admin::BooksController < ApplicationController
 
   def create
     #@book = Task.new(params[:book])
-    @book = Book.new(params[:book])
+    @book = Book.new(book_params)
     respond_to do |format|
       if @book.save
         format.html { redirect_to root_path }
@@ -21,14 +21,14 @@ class Admin::BooksController < ApplicationController
       end
     end
   end
-  # private
-  #   # Use callbacks to share common setup or constraints between actions.
-  #   def set_task
-  #     @task = Task.find(params[:id])
-  #   end
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    # def set_task
+    #   @task = Task.find(params[:id])
+    # end
 
-  #   # Never trust parameters from the scary internet, only allow the white list through.
-  #   def task_params
-  #     params.require(:task).permit(:name, :completed)
-  #   end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def book_params
+      params.require(:book)
+    end
 end

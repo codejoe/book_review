@@ -1,15 +1,16 @@
 ReviewApp::Application.routes.draw do
+  get "categories/index"
   devise_for :users
   root 'home#index'
-  resources :admins
+  #resources :admins
   
-  get   'uploads'       => 'upload#index'
-  post  'uploads'       => 'upload#uploadFile'
-  post  'admins/login'  => 'admins#login'
+  #get   'uploads'       => 'upload#index'
+  #post  'uploads'       => 'upload#uploadFile'
+  #post  'admins/login'  => 'admins#login'
 
   namespace :admin do 
     root 'dashboard#index'
-    resources :books
+    resources :books, :categories
   end
   #resources :uploads
   # The priority is based upon order of creation: first created -> highest priority.
@@ -61,9 +62,9 @@ ReviewApp::Application.routes.draw do
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
-    namespace :admin do
-      # Directs /admin/products/* to Admin::ProductsController
-      # (app/controllers/admin/products_controller.rb)
-      resources :products
-    end
+    # namespace :admin do
+    #   # Directs /admin/products/* to Admin::ProductsController
+    #   # (app/controllers/admin/products_controller.rb)
+    #   resources :products
+    # end
 end

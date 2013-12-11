@@ -1,0 +1,24 @@
+<div class="midlePan">
+  <a href="<%= new_admin_book_path %>">Add New Book</a>
+  <h3>List Of Books</h3>
+  <table class="table table-striped">
+    <tr>
+      <th>No.</th>
+      <th>Book Title</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
+    <% number = 0 %>
+    <% 10.times do %>
+      <tr>
+        <td><%= number += 1 %>.</td>
+        <td>Tom Sawyer</td>
+        <td>Dealofou</td>
+        <td>
+          <a href="#">Edit</a> | 
+          <a href="#">Delete</a>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
