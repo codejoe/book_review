@@ -8,7 +8,6 @@ class Admin::BooksController < ApplicationController
   end
 
   def create
-    #@book = Task.new(params[:book])
     @book = Book.new(book_params)
     respond_to do |format|
       if @book.save
@@ -22,13 +21,7 @@ class Admin::BooksController < ApplicationController
     end
   end
   private
-    # Use callbacks to share common setup or constraints between actions.
-    # def set_task
-    #   @task = Task.find(params[:id])
-    # end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book)
+      params.require(:book).permit(:name,:date_release)
     end
 end
