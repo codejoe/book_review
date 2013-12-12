@@ -1,6 +1,6 @@
 class Admin::BooksController < ApplicationController
   layout "admin"
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :admin?
   def index
     @books = Book.all
   end
@@ -20,6 +20,9 @@ class Admin::BooksController < ApplicationController
         #format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
+  end
+  def admin?
+    redirect_to root_path unless current_user.role == "admin"
   end
   private
     def book_params
