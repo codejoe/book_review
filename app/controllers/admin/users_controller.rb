@@ -18,13 +18,17 @@ class Admin::UsersController < ApplicationController
         #format.json { render json: @book, status: :created, location: @book }
         #format.js { return render status: 200 }
       else
-        #format.html { render action: "new" }
+        format.html { render action: "new" }
         #format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
   end
+  def new
+    @role = params[:role]
+    @user = User.new
+  end
   private
     def user_params
-      params.require(:book).permit(:name,:password,:role)
+      params.require(:user).permit(:email,:password,:role)
     end
 end
