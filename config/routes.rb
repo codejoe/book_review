@@ -3,6 +3,7 @@ ReviewApp::Application.routes.draw do
   devise_for :users
   root 'home#index'
   #resources :admins
+  resources :users
   
   #get   'uploads'       => 'upload#index'
   #post  'uploads'       => 'upload#uploadFile'
@@ -11,6 +12,13 @@ ReviewApp::Application.routes.draw do
   namespace :admin do 
     root 'dashboard#index'
     resources :books, :categories
+    resources :users do
+      collection do 
+        get 'admin'
+        get 'visitor'
+        get 'reviewer'
+      end
+    end
   end
   #resources :uploads
   # The priority is based upon order of creation: first created -> highest priority.

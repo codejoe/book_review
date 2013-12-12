@@ -1,6 +1,7 @@
 <div class="midlePan">
   <a href="<%= new_admin_book_path %>">Add New Book</a>
   <h3>List Of Books</h3>
+
   <table class="table table-striped">
     <tr>
       <th>No.</th>
@@ -9,16 +10,16 @@
       <th></th>
     </tr>
     <% number = 0 %>
-    <% 10.times do %>
-      <tr>
-        <td><%= number += 1 %>.</td>
-        <td>Tom Sawyer</td>
-        <td>Dealofou</td>
-        <td>
-          <a href="#">Edit</a> | 
-          <a href="#">Delete</a>
-        </td>
-      </tr>
+    <% @books.each do |book| %>
+    <tr>
+      <td><%= number += 1 %>.</td>
+      <td><%= book.name %></td>
+      <td><%= book.author %></td>
+      <td>
+        <%= link_to 'Edit', edit_admin_book_path(book), class: "btn btn-xs btn-success" %>
+        <%= link_to 'Destroy', admin_book_path(book), class: "btn btn-xs btn-danger", id: "destroy_task" , method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
     <% end %>
   </table>
 </div>

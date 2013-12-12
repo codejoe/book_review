@@ -2,6 +2,7 @@ class Admin::BooksController < ApplicationController
   layout "admin"
   before_filter :authenticate_user!
   def index
+    @books = Book.all
   end
   def new
     @book = Book.new
