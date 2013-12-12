@@ -51,34 +51,34 @@
       </div>
     </div>
     <div id="middlePan">
-    <table class="table table-striped">
-    <tr>
-      <th>No.</th>
-      <th>Cover</th>
-      <th>Book Title</th>
-      <th>Author</th>
-      <th>Status</th>
-      <th></th>
-    </tr>
-    <% number = 0 %>
-    <% @books.each do |book| %>
-    <tr>
-      <td><%= number += 1 %></td>
-      <td> 
-        <div class="review">
-         <%= image_tag book.photo.url %>
-        </div>
-      </td>
-      <td><%= book.name %></td>
-      <td><%= book.author %></td>
-      <td> Reviewed / Not</td>
-      <td> <!--<a href="#"><button class="button btn-success"> Review It !</button></a>--></td>
-    </tr>
-    <% end %>
-    </table>
+      <table class="table table-striped">
+      <tr>
+        <th>No.</th>
+        <th>Cover</th>
+        <th>Book Title</th>
+        <th>Author</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+      <% number = 0 %>
+      <% @books.each do |book| %>
+      <tr>
+        <td><%= number += 1 %></td>
+        <td> 
+          <div class="review">
+           <%= image_tag book.photo.url %>
+          </div>
+        </td>
+        <td><%= book.name %></td>
+        <td><%= book.author %></td>
+        <td> Reviewed / Not</td>
+        <td> <!--<a href="#"><button class="button btn-success"> Review It !</button></a>--></td>
+      </tr>
+      <% end %>
+      </table>
     </div>
-<%= paginate @books %>
-
+    <%= paginate @books %>
+    
     <div id="bottomPan">
       <!-- #Bottom Pan -->
     </div>
