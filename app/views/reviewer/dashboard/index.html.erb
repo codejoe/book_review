@@ -2,6 +2,7 @@
 <table class="table table-striped">
   <tr>
     <th>No.</th>
+    <th>Cover</th>
     <th>Book Title</th>
     <th>Author</th>
     <th>Status</th>
@@ -11,6 +12,11 @@
   <% @books.each do |book| %>
   <tr>
     <td><%= number += 1 %></td>
+    <td> 
+      <div class="review">
+       <%= image_tag book.photo.url %>
+      </div>
+    </td>
     <td><%= book.name %></td>
     <td><%= book.author %></td>
     <td> Reviewed / Not</td>
@@ -19,3 +25,4 @@
   <% end %>
 </table>
 </div>
+<%= paginate @books %>

@@ -47,6 +47,7 @@ end
  gem 'bootstrap-sass'
  gem 'devise'
  gem 'paperclip'
+ gem 'kaminari'
  group :development do
   gem 'rails_layout'
  end

@@ -19,7 +19,7 @@
 @category_book1 = CategoryBook.create category_id: 2, book_id: 1
 @category_book2 = CategoryBook.create category_id: 3, book_id: 2 
 @category_book3 = CategoryBook.create category_id: 3, book_id: 3 
-@category_book4 = CategoryBook.create category_id: 1, book_id: 4
+@category_book4 = CategoryBook.create category_id: 1, book_id: 4  
 @category_book5 = CategoryBook.create category_id: 4, book_id: 5
 
 # Users
