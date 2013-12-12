@@ -58,10 +58,10 @@
         <h3>Feature</h3>
           <div class="feature">
             <div class="feature-img">
-              <%= image_tag "the_namesake.jpg" %> 
+              <%= image_tag @featured.photo.url %> 
             </div>
             <div class="feature-summary">
-              Jhumpa Lahiri's Interpreter of Maladies established this young writer as one the most brilliant of her generation. Her stories are one of the very few debut works -- and only a handful of collections -- to have won the Pulitzer Prize for fiction. Among the many other awards and honors it received were the New Yorker Debut of the Year award, the PEN/Hemingway Award, and the...more
+              <%= @featured.description %>
             </div>
             <div class="clearing"></div>
           </div>
@@ -127,6 +127,10 @@
     <div id="bottomPan">
       <!-- #Bottom Pan -->
     </div>
+    <ul id="tiles">
+      <li><%= image_tag 'the_namesake.jpg' %><p>1</p></li>
+      <li><%= image_tag 'the_namesake.jpg' %><p>2</p></li>
+    </ul>
 
   </div>
 </div>
