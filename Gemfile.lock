@@ -67,6 +67,9 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-wookmark-rails (0.0.1)
     json (1.8.1)
+    kaminari (0.15.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -153,7 +156,11 @@ DEPENDENCIES
   devise
   jbuilder (~> 1.2)
   jquery-rails
+<<<<<<< HEAD
   jquery-wookmark-rails
+=======
+  kaminari
+>>>>>>> 73bd0b5d0f662f56e69ae22a910da0e501b43ef7
   paperclip
   rails (= 4.0.2)
   rails_layout

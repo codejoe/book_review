@@ -48,6 +48,7 @@ end
  gem 'devise'
  gem 'paperclip'
  gem "jquery-wookmark-rails"
+ gem 'kaminari'
  group :development do
   gem 'rails_layout'
  end
