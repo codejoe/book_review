@@ -18,10 +18,32 @@
   <%= f.label :name %><br />
   <%= f.text_field :name, required: true %>
 </div>
-  <%= select("book","category", Category.all.collect {|p| [ p.name, p.id ] }, {include_blank: true}) %>
+<div class="field">
+  <%= f.label :author %><br />
+  <%= f.text_field :author, required: true %>
+</div>
+<div class="field">
+  <%= f.label :number_of_page %><br />
+  <%= f.text_field :number_of_page, required: true %>
+</div>
+<div>
+  <%= f.label Category %><br />
+  <%= f.collection_select(:category, Category.all, :id, :name) %>
+</div>
+<div>
+  <%= f.label :date_release %><br />
   <%= f.date_field :date_release %>
+</div>
+<div class="field">
+  <%= f.label :description %><br />
+  <%= f.text_area :description, required: true %>
+</div>
+<div>
+  <%= f.label :photo %><br />
   <%= f.file_field :photo %>
+</div>
 <div class="actions">
+  <br>
   <%= f.submit %>
 </div>
 <% end %> 

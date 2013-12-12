@@ -68,9 +68,9 @@
 
           <h3>Books</h3>
           <div class="books">
-          <% 6.times do %>
+          <% @books.each do |book| %>
             <div class="box">
-              <a href="#"> <%= image_tag "the_namesake.jpg" %> </a>
+              <a href="#"> <%= image_tag book.photo.url %> </a>
             </div>
           <% end %>
             <a class="text-right" href="#">more..</a>
@@ -80,8 +80,8 @@
           <h3>Category</h3>
           <div class="category">            
               <ul>
-              <% 10.times do %>
-                <li><a href="#">Adventures</a></li>
+              <% @categories.each do |category| %>
+                <li><a href="#"><%= category.name %></a></li>
               <% end %>
               </ul>
           </div>

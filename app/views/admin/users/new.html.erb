@@ -1,0 +1,30 @@
+
+<% #([:admin, @user], html: {id: "form_user"}) in bisa update %>
+<%= form_for(@user, url: admin_users_path, html: {id: "form_user"}) do |f| %>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="field">
+  <%= f.label :email %><br />
+  <%= f.email_field :email, required: true, :autofocus => true %>
+</div>
+<div class="field">
+  <%= f.label :password %><br />
+  <%= f.password_field :password, required: true %>
+  <%= f.hidden_field :role, value:@role %>
+</div>
+<div class="actions">
+  <br>
+  <%= f.submit %>
+</div>
+<% end %> 

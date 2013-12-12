@@ -12,7 +12,7 @@ class Admin::BooksController < ApplicationController
     @book = Book.new(book_params.merge(category:category_params))
     respond_to do |format|
       if @book.save
-        format.html { redirect_to admin_books_path }
+        format.html { redirect_to root_path }
         #format.json { render json: @book, status: :created, location: @book }
         #format.js { return render status: 200 }
       else
@@ -26,7 +26,7 @@ class Admin::BooksController < ApplicationController
   end
   private
     def book_params
-      params.require(:book).permit(:name,:date_release,:photo)
+      params.require(:book).permit(:name,:date_release,:photo,:description,:number_of_page,:author)
     end
     def category_params
       cat_id = params.require(:book).permit(:category)
