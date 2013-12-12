@@ -46,6 +46,7 @@ end
  gem 'slim-rails'
  gem 'bootstrap-sass'
  gem 'devise'
+ gem 'paperclip'
  group :development do
   gem 'rails_layout'
  end
