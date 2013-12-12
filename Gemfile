@@ -49,6 +49,8 @@ end
  gem 'paperclip'
  gem "jquery-wookmark-rails"
  gem 'kaminari'
+ #gem 'ancestry'
+ gem 'acts_as_commentable'
  group :development do
   gem 'rails_layout'
  end

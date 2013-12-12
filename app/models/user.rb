@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :comments
+
   scope :admin,     -> { where(role: 'admin') }
   scope :visitor,   -> { where(role: 'visitor') }
   scope :reviewer,  -> { where(role: 'reviewer') }

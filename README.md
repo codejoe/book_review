@@ -54,3 +54,13 @@ database
 -> update buku
 -> aproval review
 -> add review
+
+####Tahapan untuk melakukan proses pemberian komentar
+1.9.2-p320 :001 > aji = User.first
+1.9.2-p320 :002 > coment = Comment.create comment:"Tes with user", user:aji
+1.9.2-p320 :003 > buku1 = Book.first
+1.9.2-p320 :005 > buku1.add_comment coment
+1.9.2-p320 :006 > buku1.comments
+1.9.2-p320 :009 > Comment.find_comments_by_user aji
+1.9.2-p320 :013 > coment.user
+
