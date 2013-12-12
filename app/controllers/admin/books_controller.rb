@@ -22,6 +22,6 @@ class Admin::BooksController < ApplicationController
   end
   private
     def book_params
-      params.require(:book).permit(:name,:date_release)
+      params.require(:book).permit(:name,:date_release,:photo)
     end
 end

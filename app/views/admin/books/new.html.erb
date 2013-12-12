@@ -1,6 +1,6 @@
 
 <% #([:admin, @book], html: {id: "form_book"}) in bisa update %>
-<%= form_for(@book, url: admin_books_path, html: {id: "form_book"}) do |f| %>
+<%= form_for(@book, url: admin_books_path, html: {id: "form_book", multipart: true}) do |f| %>
 
 <% if @book.errors.any? %>
   <div id="error_explanation">
@@ -19,6 +19,7 @@
   <%= f.text_field :name, required: true %>
 </div>
   <%= f.date_field :date_release %>
+  <%= f.file_field :photo %>
 <div class="actions">
   <%= f.submit %>
 </div>
