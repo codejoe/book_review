@@ -9,7 +9,7 @@ class Admin::BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(book_params)
+    @book = Book.new(book_params.merge(category:category_params))
     respond_to do |format|
       if @book.save
         format.html { redirect_to admin_books_path }
@@ -27,5 +27,9 @@ class Admin::BooksController < ApplicationController
   private
     def book_params
       params.require(:book).permit(:name,:date_release,:photo)
+    end
+    def category_params
+      cat_id = params.require(:book).permit(:category)
+      Category.find_by_id cat_id[:category]
     end
 end

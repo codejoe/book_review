@@ -18,6 +18,7 @@
   <%= f.label :name %><br />
   <%= f.text_field :name, required: true %>
 </div>
+  <%= select("book","category", Category.all.collect {|p| [ p.name, p.id ] }, {include_blank: true}) %>
   <%= f.date_field :date_release %>
   <%= f.file_field :photo %>
 <div class="actions">
