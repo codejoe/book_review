@@ -12,7 +12,7 @@ class Admin::BooksController < ApplicationController
     @book = Book.new(book_params)
     respond_to do |format|
       if @book.save
-        format.html { redirect_to root_path }
+        format.html { redirect_to admin_books_path }
         #format.json { render json: @book, status: :created, location: @book }
         #format.js { return render status: 200 }
       else

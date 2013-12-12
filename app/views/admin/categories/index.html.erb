@@ -1,19 +1,17 @@
 <div class="midlePan">
-  <a href="<%= new_admin_book_path %>">Add New Book</a>
+  <a href="<%= new_admin_category_path %>">Add New Category</a>
   <h3>List Of Books</h3>
   <table class="table table-striped">
     <tr>
       <th>No.</th>
       <th>Book Title</th>
-      <th>Author</th>
       <th></th>
     </tr>
     <% number = 0 %>
-    <% 10.times do %>
+    <% @categories.each do |category| %>
       <tr>
         <td><%= number += 1 %>.</td>
-        <td>Tom Sawyer</td>
-        <td>Dealofou</td>
+        <td><%= category.name %></td>
         <td>
           <a href="#">Edit</a> | 
           <a href="#">Delete</a>
