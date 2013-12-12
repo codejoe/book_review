@@ -4,21 +4,19 @@
   <table class="table table-striped">
     <tr>
       <th>No.</th>
-      <th>Book Title</th>
-      <th>Author</th>
+      <th>Email</th>
       <th></th>
     </tr>
     <% number = 0 %>
-    <% 10.times do %>
-      <tr>
-        <td><%= number += 1 %>.</td>
-        <td>Tom Sawyer</td>
-        <td>Dealofou</td>
-        <td>
-          <a href="#">Edit</a> | 
-          <a href="#">Delete</a>
-        </td>
-      </tr>
+    <% @reviewers.each do |reviewer| %>
+    <tr>
+      <td><%= number += 1 %>.</td>
+      <td><%= reviewer.email %></td>
+      <td>
+        <%= link_to 'Edit', edit_admin_user_path(visitor), class: "btn btn-xs btn-success" %>
+        <%= link_to 'Destroy', admin_user_path(visitor), class: "btn btn-xs btn-danger", id: "destroy_task" , method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
     <% end %>
   </table>
 </div>
