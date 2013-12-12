@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Books Review</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="wrap">
+  <div id="main" class="container clear-top">
+
+    <div id="topPan">
+      <a href="<%= root_path %>">
+      <div class="logoImage">
+        <%= image_tag "logo.png" %> 
+      </div>
+      <div class="logoTitle">
+        Books Review
+      </div>
+      </a>
+
+      <div class="clearing">
+        &nbsp;
+      </div>
+      <div class="navBar">
+        <nav class="navbar navbar-default" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="<%= reviewer_root_path %>">List Of Books to Review </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sign-form">
+        Welcome back, <b><%= current_user.email %></b>
+      </div>
+    </div>
+
+<%= yield %>
+
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <p>&copy; 2013. Akademi Rails.</p>
+  </div>
+</div>
+</body>
+</html>
