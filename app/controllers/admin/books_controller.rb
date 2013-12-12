@@ -26,7 +26,7 @@ class Admin::BooksController < ApplicationController
   end
   private
     def book_params
-      params.require(:book).permit(:name,:date_release,:photo)
+      params.require(:book).permit(:name,:date_release,:photo,:description,:number_of_page,:author)
     end
     def category_params
       cat_id = params.require(:book).permit(:category)
