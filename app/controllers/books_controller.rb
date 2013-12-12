@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
   def index
+    @user = User.new
+    @books = Book.order(:name).page params[:page]
   end
   def new
     @book = Book.new
