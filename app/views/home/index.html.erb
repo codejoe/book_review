@@ -70,7 +70,7 @@
           <div class="books">
           <% @books.each do |book| %>
             <div class="box">
-              <a href="#"> <%= image_tag book.photo.url %> </a>
+              <a href="/books/<%=book.id%>"> <%= image_tag book.photo.url %> </a>
             </div>
           <% end %>
             <%= link_to "more..", books_path, class: "text-right" %>

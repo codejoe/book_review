@@ -10,10 +10,10 @@ ReviewApp::Application.routes.draw do
     collection do
       get 'news' => 'books#news'
     end
-
-    member do 
-      get 'review'
-    end
+    resources :reviews
+    # member do 
+    #   get 'review'
+    # end
   end
   
   #get   'uploads'       => 'upload#index'

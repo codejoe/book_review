@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131212212354) do
+ActiveRecord::Schema.define(version: 20131213074024) do
 
   create_table "books", force: true do |t|
     t.string   "name"
@@ -64,13 +64,10 @@ ActiveRecord::Schema.define(version: 20131212212354) do
   end
 
   create_table "reviews", force: true do |t|
-    t.string   "reviewer_name"
-    t.string   "reviewer_email"
-    t.datetime "date"
+    t.integer  "user_id"
     t.integer  "book_id"
-    t.string   "reviewer_ip"
-    t.boolean  "approval"
-    t.text     "content"
+    t.text     "review"
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
