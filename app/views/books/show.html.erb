@@ -1,0 +1,91 @@
+<div id="wrap">
+  <div id="main" class="container clear-top">
+
+    <div id="topPan">
+      <div class="logoImage">
+        <%= image_tag "logo.png" %> 
+      </div>
+      <div class="logoTitle">
+        Books Review
+      </div>
+      <div class="clearing">
+        &nbsp;
+      </div>
+      <div class="navBar">
+        <nav class="navbar navbar-default" role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Book Release</a>
+            </li>
+            <li>
+              <a href="#">Explore</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sign-form">
+        <% if user_signed_in? == false %>
+        <%= form_for(@user, :as => :user, :url => session_path(:user)) do |f| %>
+          <%#= devise_error_messages! %>
+          Email: <%= f.email_field :email, :autofocus => true %>
+          Password:<%= f.password_field :password %>
+          <%= f.submit "Sign in" %>
+        <% end %>
+        Not a member? <!--<a href="#">Sign Up</a>-->
+        <% end %>
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%#= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Administrator", admin_root_path if current_user.role == "admin"  %>
+          <%= link_to "Reviewer", :class => 'navbar-link' if current_user.role == "reviewer"  %>
+          |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          <% else %>
+          <%= link_to "Sign up,", new_user_registration_path, :class => 'navbar-link'  %>
+          <%#= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+          <a href="#">Forgot Password?</a>
+        <% end %>
+      </div>
+    </div>
+    <div id="middlePan">
+      <p>
+        <strong>Name:</strong>
+        <%= @book.name %>
+      </p>
+      <p>
+        <strong>Name:</strong>
+        <%= @book.author %>
+      </p>
+      <p>
+        <strong>Name:</strong>
+        <%= @book.date_release %>
+      </p>
+      <p>
+        <strong>Name:</strong>
+        <%= @book.description %>
+      </p>
+      <%= link_to 'Comment', new_book_comment_path(@book) %> |
+
+    </div>
+    
+    <div id="bottomPan">
+      <!-- #Bottom Pan -->
+    </div>
+    
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <p>&copy; 2013. Akademi Rails.</p>
+  </div>
+</div>
+
+
+
+
+
+<%#= link_to 'Edit', edit_task_path(@task) %> |
+<%#= link_to 'Back', tasks_path %>

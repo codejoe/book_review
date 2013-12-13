@@ -4,7 +4,10 @@ ReviewApp::Application.routes.draw do
   devise_for :users
   root 'home#index'
   #resources :admins
-  resources :users, :books
+  resources :users
+  resources :books do
+    resources :comments
+  end
   
   #get   'uploads'       => 'upload#index'
   #post  'uploads'       => 'upload#uploadFile'

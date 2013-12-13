@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
   def index
     @user = User.new
     @books = Book.order(:name).page params[:page]
@@ -21,11 +22,16 @@ class BooksController < ApplicationController
       end
     end
   end
-  # private
+  def show
+    @user = User.new
+    
+  end
+  private
   #   # Use callbacks to share common setup or constraints between actions.
-  #   def set_task
-  #     @task = Task.find(params[:id])
-  #   end
+    def set_book
+      ##ini untuk mendapatkan id dari url terakhir
+      @book = Book.find(params[:id])
+    end
 
   #   # Never trust parameters from the scary internet, only allow the white list through.
   #   def task_params
