@@ -18,7 +18,7 @@
                 <%= link_to "Home", root_path %>
             </li>
             <li>
-              <%= link_to "Book Release", news_books_path %>
+                <%= link_to "Book Release", news_books_path %>
             </li>
           </ul>
         </nav>
@@ -90,12 +90,12 @@
 
           <div class="new-review">
             <h3>New Review</h3>
-            <% 3.times do %>
+            <% @review.each do |review| %>
               <div class="review">
-                <%= image_tag 'the_namesake.jpg' %>
+                <%= image_tag review.book.photo.url %>
                 <p>
-                  Book Title<br/>
-                  <small>Reviewed by: Tony</small>
+                  <%= link_to review.book.name, book_path(review.book) %><br/>
+                  <small>Reviewed by: <%= review.user.email%></small>
                 </p>
               </div>
               <div class="clearing"></div>

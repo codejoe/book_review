@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @categories = Category.all
     @books = Book.limit(6)
     @featured = Book.featured.first
+    @review = Review.last(3)
   end
 
 
