@@ -24,7 +24,7 @@ class BooksController < ApplicationController
   end
   def show
     @user = User.new
-    
+    @comment = Comment.new user:current_user
   end
   def news
     @user = User.new

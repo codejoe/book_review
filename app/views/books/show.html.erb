@@ -79,22 +79,39 @@
 
       <% @book.comments.each do |comment| %>
           <p>
+              <% if comment.user.nil? %>
+              Anonymous
+              <% else %>
               <%= comment.user.email %>
+              <% end %>
               <small><%= comment.title %></small> <br/>
               <%= comment.comment %>
           </p>
           <hr/>
       <% end %>
-
-      <%= form_tag do %>
-        Name : <input type="text" name="name" value=""> <br/>
-        Email : <input type="text" name="email" value=""> <br/>
-        Rate : </br>
-        Comment : <%= text_area_tag(:comment, "", size: "24x6") %>
+      <% if user_signed_in? %>
+        <%= form_for(@comment, url: book_comments_path(@book), html: {id: "form_comment"}) do |f| %>
+          <% if @comment.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+              <ul>
+              <% @comment.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="field">
+            <%= f.label :comment %><br/>
+            <%= f.text_area :comment, required: true %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+      <% else %>
+          <%= link_to "Sign up First To Give Comment", new_user_registration_path, :class => 'navbar-link'  %>
       <% end %>
-
-      <%= link_to 'Comment', new_book_comment_path(@book) %> |
-
     </div>
     
     <div id="bottomPan">
