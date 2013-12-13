@@ -74,11 +74,25 @@
         <div class="clearing"></div>
         <div class="review-form">
           <h3>Write Review:</h3>  
-          
-          <%= form_tag do %>
-            <%= text_area_tag(:review, "", size: "100x6") %><br/><br/>
-            <%= submit_tag("Submit") %>
-          <% end %>
+          <%= form_for([@review], url: book_reviews_path, html: {id: "form_review"}) do |f| %>
+            <% if @review.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+                <ul>
+                <% @review.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <div class="field">
+              <%= f.label :review %><br />
+              <%= f.text_area :review, required: true, size: "100x6" %>
+            </div>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          <% end %> 
         </div>
       </div>
     </div>

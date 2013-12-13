@@ -1,11 +1,12 @@
 class ReviewsController < ApplicationController
   def index
     @book = Book.find(params[:book_id])
+    @review = Review.new
   end
-  def cretae
-    def create
+  
+  def create
     @book   = Book.find(params[:book_id])
-    @review = Review.new(params[:review])
+    @review = Review.new(review_params)
     @review.user = current_user
     @review.book = @book
     respond_to do |format|
@@ -19,5 +20,9 @@ class ReviewsController < ApplicationController
       end
     end
   end
-  end
+  private
+    def review_params
+      params.require(:review).permit(:review)
+    end
+
 end
