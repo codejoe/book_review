@@ -15,10 +15,10 @@
         <nav class="navbar navbar-default" role="navigation">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a href="#">Home</a>
+                <%= link_to "Home", root_path %>
             </li>
             <li>
-              <a href="#">Book Release</a>
+              <%= link_to "Book Release", news_books_path %>
             </li>
             <li>
               <a href="#">Explore</a>
@@ -40,7 +40,7 @@
         Logged in as <strong><%= current_user.email %></strong>.
         <%#= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
         <%= link_to "Administrator", admin_root_path if current_user.role == "admin"  %>
-        <%= link_to "Reviewer", :class => 'navbar-link' if current_user.role == "reviewer"  %>
+        <%= link_to "Reviewer", reviewer_root_path if current_user.role == "reviewer"  %>
         |
         <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         <% else %>
@@ -73,7 +73,7 @@
               <a href="#"> <%= image_tag book.photo.url %> </a>
             </div>
           <% end %>
-            <a class="text-right" href="#">more..</a>
+            <%= link_to "more..", books_path, class: "text-right" %>
             <div class="clearing"></div>
           </div>
 
@@ -81,7 +81,8 @@
           <div class="category">            
               <ul>
               <% @categories.each do |category| %>
-                <li><a href="#"><%= category.name %></a></li>
+                <li>
+                <%= link_to category.name, category_path(category) %></li>
               <% end %>
               </ul>
           </div>

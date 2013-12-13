@@ -1,6 +1,6 @@
 <div class="midlePan">
   <a href="<%= new_admin_user_path %>/?role=reviewer">Add New Reviewer</a>
-  <h3>List Of Books</h3>
+  <h3>List Of Reviewer</h3>
   <table class="table table-striped">
     <tr>
       <th>No.</th>
@@ -13,8 +13,8 @@
       <td><%= number += 1 %>.</td>
       <td><%= reviewer.email %></td>
       <td>
-        <%= link_to 'Edit', edit_admin_user_path(visitor), class: "btn btn-xs btn-success" %>
-        <%= link_to 'Destroy', admin_user_path(visitor), class: "btn btn-xs btn-danger", id: "destroy_task" , method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_admin_user_path(reviewer), class: "btn btn-xs btn-success" %>
+        <%= link_to 'Destroy', admin_user_path(reviewer), class: "btn btn-xs btn-danger", id: "destroy_task" , method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
     <% end %>

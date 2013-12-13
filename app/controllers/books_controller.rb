@@ -26,6 +26,10 @@ class BooksController < ApplicationController
     @user = User.new
     
   end
+  def news
+    @user = User.new
+    @books = Book.news.order(:name).page params[:page]
+  end
   private
   #   # Use callbacks to share common setup or constraints between actions.
     def set_book
