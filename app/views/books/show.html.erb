@@ -51,27 +51,47 @@
       </div>
     </div>
     <div id="middlePan">
-      <p>
-        <div class="box">
-          <%= image_tag @book.photo.url %>
-        </div>
-      </p>
-      <p>
-        <strong>Name:</strong>
-        <%= @book.name %>
-      </p>
-      <p>
-        <strong>Author:</strong>
-        <%= @book.author %>
-      </p>
-      <p>
-        <strong>Date Release:</strong>
-        <%= @book.date_release %>
-      </p>
-      <p>
-        <strong>Name:</strong>
-        <%= @book.description %>
-      </p>
+      <div style="display: block">
+        <p>
+          <div class="box">
+            <%= image_tag @book.photo.url %>
+          </div>
+        </p>
+        <p>
+          <strong>Name:</strong>
+          <%= @book.name %>
+        </p>
+        <p>
+          <strong>Author:</strong>
+          <%= @book.author %>
+        </p>
+        <p>
+          <strong>Date Release:</strong>
+          <%= @book.date_release %>
+        </p>
+        <p>
+          <strong>Name:</strong>
+          <%= @book.description %>
+        </p>
+        <div class="clearing"></div>
+      </div>
+
+      <% @book.comments.each do |comment| %>
+          <p>
+              <%= comment.user.email %>
+              <small><%= comment.title %></small> <br/>
+              <%= comment.comment %>
+          </p>
+          <hr/>
+      <% end %>
+
+      <%= form_tag do %>
+        Name : <input type="text" name="name" value=""> <br/>
+        Email : <input type="text" name="email" value=""> <br/>
+        Rate : </br>
+        Comment : <%= text_area_tag(:comment, "", size: "24x6") %>
+      <% end %>
+
       <%= link_to 'Comment', new_book_comment_path(@book) %> |
 
     </div>
