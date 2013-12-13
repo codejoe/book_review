@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy, :review]
   def index
     @user = User.new
     @books = Book.order(:name).page params[:page]
@@ -29,6 +29,8 @@ class BooksController < ApplicationController
   def news
     @user = User.new
     @books = Book.news.order(:name).page params[:page]
+  end
+  def review
   end
   private
   #   # Use callbacks to share common setup or constraints between actions.
