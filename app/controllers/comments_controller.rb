@@ -1,7 +1,7 @@
-class CommentsController < BooksController
+class CommentsController < ApplicationController
 
   def new
-    #debugger
+    #@book = Book.find_by(id: params[:book_id])
     @comment = Comment.new user:current_user
   end
 end

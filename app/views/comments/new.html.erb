@@ -1,4 +1,4 @@
-<%= params[:id]%>
+<%= @book.name%>
 
 <%= form_for(:comments, html: {id: "form_comment"}) do |f| %>
 <% if @comment.errors.any? %>
