@@ -20,9 +20,6 @@
             <li>
               <%= link_to "Book Release", news_books_path %>
             </li>
-            <li>
-              <a href="#">Explore</a>
-            </li>
           </ul>
         </nav>
       </div>
@@ -58,7 +55,7 @@
         <h3>Feature</h3>
           <div class="feature">
             <div class="feature-img">
-              <%= image_tag @featured.photo.url %> 
+              <a href="<%= books_path %>/feature"><%= image_tag @featured.photo.url %></a> 
             </div>
             <div class="feature-summary">
               <%= @featured.description %>
@@ -70,7 +67,7 @@
           <div class="books">
           <% @books.each do |book| %>
             <div class="box">
-              <a href="#"> <%= image_tag book.photo.url %> </a>
+              <a href="<%= books_path%>/<%= book.id %>"> <%= image_tag book.photo.url %> </a>
             </div>
           <% end %>
             <%= link_to "more..", books_path, class: "text-right" %>
