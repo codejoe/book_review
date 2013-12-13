@@ -52,15 +52,20 @@
     </div>
     <div id="middlePan">
       <p>
+        <div class="box">
+          <%= image_tag @book.photo.url %>
+        </div>
+      </p>
+      <p>
         <strong>Name:</strong>
         <%= @book.name %>
       </p>
       <p>
-        <strong>Name:</strong>
+        <strong>Author:</strong>
         <%= @book.author %>
       </p>
       <p>
-        <strong>Name:</strong>
+        <strong>Date Release:</strong>
         <%= @book.date_release %>
       </p>
       <p>
