@@ -4,9 +4,12 @@ ReviewApp::Application.routes.draw do
   devise_for :users
   root 'home#index'
   #resources :admins
-  resources :users
+  resources :users, :categories
   resources :books do
     resources :comments
+    collection do
+      get 'news' => 'books#news'
+    end
   end
   
   #get   'uploads'       => 'upload#index'

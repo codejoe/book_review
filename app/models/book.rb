@@ -7,4 +7,5 @@ class Book < ActiveRecord::Base
   scope :featured,  -> { where(featured: true) }
   paginates_per 10
   acts_as_commentable
+  scope :news,  -> { where("date_release > ?", Time.now) }
 end
