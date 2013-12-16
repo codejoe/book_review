@@ -8,8 +8,11 @@ ReviewApp::Application.routes.draw do
   resources :books do
     resources :comments
     collection do
-      get 'news' => 'books#news'
+      get 'news'        => 'books#news'
+      get 'likes/:id'   => 'books#like',    as: :likes
+      get 'unlike/:id'  => 'books#unlike',  as: :unlikes
     end
+
     resources :reviews
     # member do 
     #   get 'review'

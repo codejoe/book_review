@@ -48,7 +48,7 @@
       </div>
     </div>
     <div id="middlePan">
-      <div style="display: block">
+      <div id="book" style="display: block">
         <p>
           <div class="box">
             <%= image_tag @book.photo.url %>
@@ -69,6 +69,17 @@
         <p>
           <strong>Name:</strong>
           <%= @book.description %>
+        </p>
+        <p>
+          <a href='#' ><strong>Likes:</strong></a>
+          <%= @liked.size %>
+        </p>
+        <p>
+          <% if current_user.liked? @book %>
+            <%= link_to "Unlike it", unlikes_books_path(@book) ,remote: true, html: {id:"like"} %>
+          <% else %>
+            <%= link_to "Like it", likes_books_path(@book) ,remote: true,id:"like" %>
+          <% end %>
         </p>
         <div class="clearing"></div>
       </div>

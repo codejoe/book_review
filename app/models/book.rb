@@ -8,4 +8,5 @@ class Book < ActiveRecord::Base
   paginates_per 10
   acts_as_commentable
   scope :news,  -> { where("date_release > ?", Time.now) }
+  acts_as_votable
 end

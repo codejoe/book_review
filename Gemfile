@@ -51,6 +51,7 @@ end
  gem 'kaminari'
  #gem 'ancestry'
  gem 'acts_as_commentable'
+ gem 'acts_as_votable'
  group :development do
   gem 'rails_layout'
  end
