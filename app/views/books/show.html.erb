@@ -75,11 +75,15 @@
           <%= @liked.size %>
         </p>
         <p>
+        <% if user_signed_in? %>
           <% if current_user.liked? @book %>
             <%= link_to "Unlike it", unlikes_books_path(@book) ,remote: true, html: {id:"like"} %>
           <% else %>
             <%= link_to "Like it", likes_books_path(@book) ,remote: true,id:"like" %>
           <% end %>
+        <% else %>
+          <%= link_to "Sign up First To Like", new_user_registration_path, :class => 'navbar-link'  %>
+        <% end %>
         </p>
         <div class="clearing"></div>
       </div>
